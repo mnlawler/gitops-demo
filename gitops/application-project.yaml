@@ -6,7 +6,7 @@ metadata:
 spec:
   description: Base cluster configuration
   sourceRepos:
-    - 'https://github.com/mnlawler/gitops-sample.git'
+    - 'https://github.com/mnlawler/gitops.git'
   destinations:
     - namespace: '*'
       server: https://kubernetes.default.svc
