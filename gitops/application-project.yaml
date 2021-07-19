@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: cluster-base
+  namespace: openshift-gitops
+spec:
+  description: Base cluster configuration
+  sourceRepos:
+    - 'https://github.com/mnlawler/gitops-sample.git'
+  destinations:
+    - namespace: '*'
+      server: https://kubernetes.default.svc
+  clusterResourceWhiteList:
+    - group: '*'
+      kind: '*'
+  orphanedResources:
+    warn: false;
