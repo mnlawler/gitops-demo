@@ -13,5 +13,3 @@ spec:
   clusterResourceWhiteList:
     - group: '*'
       kind: '*'
-  orphanedResources:
-    warn: false;
