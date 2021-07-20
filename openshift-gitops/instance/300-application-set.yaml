@@ -21,3 +21,8 @@ spec:
         path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
+      ignoreDifferences:
+      - group: integreatly.org
+        kind: GrafanaDataSource
+        jsonPointers:
+        - /spec/datasources/0/secureJsonData/httpHeaderValue1
