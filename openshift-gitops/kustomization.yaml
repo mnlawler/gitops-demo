@@ -3,7 +3,7 @@ kind: Kustomization
 
 bases:
 - operator/openshift-gitops-operator-subscription.yaml
-- instance/100-rabc.yaml
+- instance/100-rbac.yaml
 - instance/200-application-project.yaml
 - instance/300-application-set.yaml
 - instance/400-argocd.yaml
