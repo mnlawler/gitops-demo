@@ -4,12 +4,15 @@ metadata:
   name: cluster-base
   namespace: openshift-gitops
 spec:
-  description: Base cluster configuration
-  sourceRepos:
-    - 'https://github.com/mnlawler/gitops.git'
-  destinations:
-    - namespace: '*'
-      server: https://kubernetes.default.svc
-  clusterResourceWhiteList:
+  clusterResourceWhitelist:
     - group: '*'
       kind: '*'
+  description: Base cluster configuration
+  destinations:
+    - namespace: '*'
+      server: 'https://kubernetes.default.svc'
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  sourceRepos:
+    - 'https://github.com/mnlawler/gitops.git'
