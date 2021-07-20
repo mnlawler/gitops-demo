@@ -2,6 +2,8 @@ kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: openshift-gitops-openshift-gitops-argocd-application-controller-additonal
+  labels:
+    app.kubernetes.io/instance: openshift-gitops
 rules:
   - verbs:
       - '*'
@@ -38,6 +40,8 @@ kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: gitops-additonal-rbac
+  labels:
+    app.kubernetes.io/instance: openshift-gitops
 subjects:
   - kind: ServiceAccount
     name: openshift-gitops-argocd-application-controller
