@@ -27,3 +27,16 @@ rules:
       - "integreatly.org"
     resources:
       - grafanas
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: gitops-additonal-rbac
+subjects:
+  - kind: ServiceAccount
+    name: openshift-gitops-argocd-application-controller
+    namespace: openshift-gitops
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: openshift-gitops-openshift-gitops-argocd-application-controller-additonal
