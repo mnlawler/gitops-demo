@@ -3,6 +3,8 @@ kind: Subscription
 metadata:
   name: openshift-gitops-operator
   namespace: openshift-operators
+  labels:
+    app.kubernetes.io/instance: openshift-gitops
 spec:
   channel: stable
   installPlanApproval: Automatic
