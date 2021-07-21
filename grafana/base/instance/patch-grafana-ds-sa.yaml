@@ -3,11 +3,13 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: patch-grafana-ds-job
+  namespace: grafana
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: patch-grafana-ds
+  namespace: grafana
 rules:
   - apiGroups:
       - integreatly.org
