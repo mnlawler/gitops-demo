@@ -3,6 +3,7 @@ kind: Kustomization
 
 bases:
 - operator/100-openshift-gitops-operator-subscription.yaml
+- instance/150-cluster-monitoring-config.yaml
 - instance/200-rbac.yaml
 - instance/300-application-project.yaml
 - instance/400-application-set.yaml
