@@ -8,6 +8,7 @@ bases:
 - operator/grafana-subscription.yaml
 - operator/namespace.yaml
 - operator/operator-group.yaml
+- instance/ca-configmap.yaml
 - instance/cluster-monitoring-config.yaml
 - instance/session-secret.yaml
 - instance/grafana-proxy-rbac.yaml

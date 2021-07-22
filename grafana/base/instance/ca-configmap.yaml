@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ocp-injected-certs
+  namespace: grafana
+  labels:
+    config.openshift.io/inject-trusted-cabundle: "true"
