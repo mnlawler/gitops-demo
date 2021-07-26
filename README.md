@@ -32,7 +32,7 @@ For more information see: https://argocd-applicationset.readthedocs.io/en/stable
 
 ### Other documentation
 
-A great repository for reference examples of a substainial number of base operators:
+A great repository for reference examples of a substantial number of base operators:
 https://github.com/redhat-canada-gitops/catalog
 
 RedHat Openshift 4.7 GitOps Documentation:
