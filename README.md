@@ -14,12 +14,12 @@ Once the operator has finished installing it will start provision the repo as pe
 ## Useful Information
 
 ### Sync Waves
-Sync waves allow for manfiests to be defined as happening in certain orders. Pre/Post Hooks, or just ordered waves during deployment.
+Sync waves allow for manifests to be defined as happening in certain orders. Pre/Post Hooks, or just ordered waves during deployment.
 For more information see: https://argoproj.github.io/argo-cd/user-guide/sync-waves/
 
 ### Application Sets
-As used in the openshift-gitops config in this repostiory, application sets act as meta config allowing Application definitions to be generated from git repositories in a standardized fastion.
-This reduces hand rolling large amount of configuration when theres a standard directory structure/overlay structure in place.
+As used in the openshift-gitops config in this repostiory, application sets act as meta config allowing Application definitions to be generated from git repositories in a standardized fashion.
+This reduces the need to hand roll large amounts of configuration when theres a standard directory structure/overlay structure in place.
 
 In this repository examples of application sets using kustomize overlays can be found:
 - openshift-gitops/base/instance/400-application-set.yaml
