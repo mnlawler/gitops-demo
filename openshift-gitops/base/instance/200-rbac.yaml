@@ -41,7 +41,7 @@ rules:
       - "logging.openshift.io"
     resources:
       - elasticsearches
-      - ClusterLogging
+      - clusterloggings
 ---
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
