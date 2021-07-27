@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/description: Openshift Cluster Logging
+    openshift.io/display-name:  Openshift Cluster Logging
+  name: openshift-logging

@@ -1,0 +1,44 @@
+apiVersion: logging.openshift.io/v1
+kind: Elasticsearch
+metadata:
+  name: elasticsearch
+  namespace: openshift-operators-redhat
+spec:
+  indexManagement:
+    mappings:
+      - aliases:
+          - infra
+          - logs.infra
+        name: infra
+        policyRef: infra-policy
+    policies:
+      - name: infra-policy
+        phases:
+          delete:
+            minAge: 2d
+          hot:
+            actions:
+              rollover:
+                maxAge: 8h
+        pollInterval: 30m
+  managementState: Managed
+  nodeSpec:
+    proxyResources: {}
+    resources:
+      limits:
+        memory: 1Gi
+      requests:
+        cpu: 100m
+        memory: 512Mi
+  nodes:
+    - genUUID: eh422af4
+      nodeCount: 1
+      proxyResources: {}
+      resources: {}
+      roles:
+        - client
+        - data
+        - master
+      storage:
+        size: 20G
+  redundancyPolicy: ZeroRedundancy
