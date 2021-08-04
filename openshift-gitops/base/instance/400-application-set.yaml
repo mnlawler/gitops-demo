@@ -17,8 +17,6 @@ spec:
       name: '{{path.basename}}'
     spec:
       project: cluster-base
-      syncPolicy:
-        automated: {}
       source:
         repoURL: https://github.com/mnlawler/gitops.git
         targetRevision: HEAD
