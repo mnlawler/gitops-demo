@@ -7,4 +7,5 @@ commonAnnotations:
 resources:
 - operator/namespace.yaml
 - operator/elastisearch-subscription.yaml
+- operator/operatorgroup.yaml
 - instance/es.yaml
