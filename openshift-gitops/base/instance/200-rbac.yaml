@@ -42,6 +42,12 @@ rules:
     resources:
       - elasticsearches
       - clusterloggings
+  - verbs:
+      - '*'
+    apiGroups:
+      - "redhatcop.redhat.io"
+    resources:
+      - namespaceconfigs
 ---
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
