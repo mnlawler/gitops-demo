@@ -1,0 +1,3 @@
+- op: add
+  path: /spec/source/path
+  value: '/elastisearch/overlay/test'

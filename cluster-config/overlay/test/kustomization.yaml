@@ -9,5 +9,41 @@ patches:
     group: argoproj.io
     version: v1alpha1
     kind: Application
+    name: cluster-config
     namespace: openshift-gitops
-  path: patch-overlay.yaml
+  path: cluster-config-patch.yaml
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: cluster-logging
+    namespace: openshift-gitops
+  path: cluster-logging-patch.yaml
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: elastisearch
+    namespace: openshift-gitops
+  path: elastisearch-patch.yaml
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: grafana
+    namespace: openshift-gitops
+  path: grafana-patch.yaml
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: namespaceconfiguration
+    namespace: openshift-gitops
+  path: namespaceconfiguration-patch.yaml
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    name: openshift-gitops
+    namespace: openshift-gitops
+  path: openshift-gitops-patch.yaml
