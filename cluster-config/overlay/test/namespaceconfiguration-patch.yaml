@@ -1,3 +1,3 @@
 - op: add
   path: /spec/source/path
-  value: '/namespaceconfiguration/overlay/test'
+  value: 'namespaceconfiguration/overlay/test'

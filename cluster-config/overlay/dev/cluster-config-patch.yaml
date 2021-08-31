@@ -1,3 +1,3 @@
 - op: add
   path: /spec/source/path
-  value: '/cluster-config/overlay/dev'
+  value: 'cluster-config/overlay/dev'
