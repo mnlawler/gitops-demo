@@ -3,3 +3,11 @@ kind: Kustomization
 
 bases:
   - ../../base
+
+patches:
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Application
+    namespace: openshift-gitops
+  path: patch-overlay.yaml
