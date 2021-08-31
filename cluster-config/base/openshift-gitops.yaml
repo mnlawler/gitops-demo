@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openshift-gitops
+  namespace: openshift-gitops
+spec:
+  destination:
+    server: 'https://kubernetes.default.svc'
+  ignoreDifferences:
+    - group: integreatly.org
+      jsonPointers:
+        - /spec/datasources/0/secureJsonData/httpHeaderValue1
+      kind: GrafanaDataSource
+  project: default
+  source:
+    path: cluster-config
+    repoURL: 'https://github.com/mnlawler/gitops.git'
+    targetRevision: appofapps
+  syncPolicy:
+    automated: {}

@@ -4,5 +4,4 @@ kind: Kustomization
 bases:
 - operator/namespace.yaml
 - instance/200-rbac.yaml
-- instance/300-application-project.yaml
 - operator/600-openshift-gitops-operator-subscription.yaml
