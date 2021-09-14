@@ -4,11 +4,12 @@
 
 1) Log into cluster
 2) Checkout this repo
-3) Locally go to the openshift-gitops/overlay you wish to apply
+3) Locally go to the openshift-gitops/base/operator
 4) kustomize build . | oc apply -f -
+5) Locally go to the openshift-gitops/overlay you wish to apply
+6) oc wait install-plan; kustomize build . | oc apply -f -
 
-This will install required RBAC for gitops, the CRD to allow for the app project and app set to be deployed ahead of the operator, and the operator itself.
-Once the operator has finished installing it will start provision the repo as per the defintion in the application set, as the auto sync is enabled.
+This will install the operator subscription, wait for it to finish installing, then install the gitops configuration which will then install the rest of the applications.
 
 
 ## Useful Information
