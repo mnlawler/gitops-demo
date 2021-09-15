@@ -1,5 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-
-resources:
-  - git::git@github.com:mnlawler/gitops-demo.git/openshift-gitops/base/operator
