@@ -2,6 +2,12 @@
 
 ## Applying to Cluster
 
+Bootstrap:
+
+Checkout the bootstrap repo and run the appropriate cluster shellscript.
+Repo: https://github.com/mnlawler/gitops-demo-bootstrap
+
+Manually:
 1) Log into cluster
 2) Checkout this repo
 3) Locally go to the openshift-gitops/base/operator
