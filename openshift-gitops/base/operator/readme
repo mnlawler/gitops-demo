@@ -1,0 +1,1 @@
+The kustomisation file in this directory is to allow a bootstrap repo to apply just the operator ahead of the configuration.
